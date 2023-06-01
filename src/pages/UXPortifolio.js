@@ -7,9 +7,67 @@ import "./uxportifolio.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckSquare, faCoffee } from "@fortawesome/fontawesome-free-solid";
+// import { faCheckSquare, faCoffee } from "@fortawesome/fontawesome-free-solid";
 
 const UXPortifolio = () => {
+  // const [activeTab, setActiveTab] = useState(0);
+  // const tabRef = useRef(null);
+  // const [first, setFirst] = useState(true);
+  // const [second, setSecond] = useState(false);
+  // const [third, setThird] = useState(false);
+  // const [forth, setForth] = useState(false);
+  // const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  // useEffect(() => {
+  // function handleResize() {
+  //   const height = window.innerHeight;
+  //   console.log("vertical width", height);
+  // }
+
+  // const handleResize = () => {
+  // return setScreenWidth(window.innerHeight);
+  // const maxHeight = window.screen.height;
+  // if (screenWidth > maxHeight) {
+  //   setSecond(true);
+  // } else {
+  //   setFirst(true);
+  // }
+  // console.log("hdskj");
+  // };
+
+  // const handleScroll = () => {
+  //   return console.log(window.scrollY);
+  // };
+
+  // window.addEventListener("resize", handleResize);
+  // window.addEventListener("scroll", () => {
+  //   console.log(screenWidth);
+  // });
+
+  // const handleScroll = () => {
+  //   const sections = document.querySelectorAll(".section");
+  //   const scrollTop = window.pageYOffset;
+  //   let currentSectionIndex = 0;
+
+  //   sections.forEach((section, index) => {
+  //     const sectionTop = section.offsetTop - tabRef.current.offsetHeight;
+  //     if (scrollTop >= sectionTop) {
+  //       currentSectionIndex = index;
+  //     }
+  //   });
+
+  //   setActiveTab(currentSectionIndex);
+  //   console.log(currentSectionIndex);
+  // };
+
+  // window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+
+  //   // window.addEventListener("resize", handleResize);
+  //   // return () => window.removeEventListener("resize", handleResize);
+  // }, [activeTab]);
   return (
     <div
       className="ux vh-100 position-relative "
@@ -17,6 +75,7 @@ const UXPortifolio = () => {
     >
       <div
         className="dots position-fixed "
+        // ref={tabRef}
         style={{ right: 10, top: "50%", transform: "rotate(90deg)" }}
       >
         <i className="fa fa-circle text-white" aria-hidden="true"></i>
@@ -83,7 +142,7 @@ const UXPortifolio = () => {
           color: "#4d4d4d",
         }}
       ></div>
-      <section className="nav-section pt-2">
+      <section className="section nav-section pt-2">
         <nav className="navbar navbar-expand-lg navbar-dark bg-transparent bg-body-tertiary sticky-top">
           <div className="container">
             <a className="navbar-brand fw-bold text-white" href="/#">
@@ -120,7 +179,7 @@ const UXPortifolio = () => {
             {/* <img className="" src={img1} alt="img1" style={{ width: 100 }} /> */}
             <span className="fs-1">
               <i
-                class="fa fa-file-code-o text-secondary"
+                className="fa fa-file-code-o text-secondary"
                 aria-hidden="true"
               ></i>
             </span>
@@ -159,7 +218,7 @@ const UXPortifolio = () => {
         </div>
       </section>
       <section
-        className="experience mt-5 pt-2 "
+        className="section experience mt-5 pt-2 "
         style={{ backgroundColor: "#1f1f1f" }}
       >
         <div className="container py-2 py-md-5 ">
@@ -242,7 +301,10 @@ const UXPortifolio = () => {
         </div>
       </section>
 
-      <section className="skills py-5" style={{ backgroundColor: "#1f1f1f" }}>
+      <section
+        className="section skills py-5"
+        style={{ backgroundColor: "#1f1f1f" }}
+      >
         <div>
           <div className="row ">
             <div
@@ -352,7 +414,10 @@ const UXPortifolio = () => {
           </div>
         </div>
       </section>
-      <section className="projects py-5" style={{ backgroundColor: "#1f1f1f" }}>
+      <section
+        className="section projects py-5"
+        style={{ backgroundColor: "#1f1f1f" }}
+      >
         <div className="container">
           <h5 className="fw-bold text-center text-white py-3">Projects</h5>
           <div className="card-holder">
