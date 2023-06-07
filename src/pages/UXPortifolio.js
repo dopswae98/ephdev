@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import img1 from "../images/carred1.png";
 import img2 from "../images/wholelightpagefront.png";
 import img3 from "../images/portifolio.png";
@@ -10,6 +11,50 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faCheckSquare, faCoffee } from "@fortawesome/fontawesome-free-solid";
 
 const UXPortifolio = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    axios
+      // .post("http://localhost:4000/send-email", formData)
+      .post("https://emailbackend.vercel.app/send-email", formData)
+      .then((response) => {
+        console.log(response);
+        console.log("formdata", formData);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const data = new FormData(event.target);
+  //   setFormData(Object.fromEntries(data.entries()));
+  //   console.log("data", data);
+  //   // fetch("https://emailbackend.vercel.app/send-mail", {
+  //   fetch("http://localhost:4000/send-email", {
+  //     method: "POST",
+  //     body: {
+  //       email: "ephraimmatarutse@gmail.com",
+  //       subject: "Hie can l get some wodrkhs",
+  //       message: "When are you frees",
+  //     },
+  //     // body: formData,
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => console.log(data))
+  //     .catch((error) => console.error(error));
+  // };
+
   // const [activeTab, setActiveTab] = useState(0);
   // const tabRef = useRef(null);
   // const [first, setFirst] = useState(true);
@@ -68,6 +113,7 @@ const UXPortifolio = () => {
   //   // window.addEventListener("resize", handleResize);
   //   // return () => window.removeEventListener("resize", handleResize);
   // }, [activeTab]);
+  console.log(formData);
   return (
     <div
       className="ux vh-100 position-relative "
@@ -308,43 +354,74 @@ const UXPortifolio = () => {
         <div>
           <div className="row ">
             <div
-              className="col-md-6 text-white p-5"
+              className="col-md-6 text-white px-5 py-3"
               style={{ backgroundColor: "#242424" }}
             >
               <h3 className="fw-bold">Skills</h3>
               <div className="skills">
                 <p className="fw-bold">React</p>
-                <div className="progress mb-5">
+                <div className="progress mb-3">
                   <div
                     className="progress-bar"
                     role="progressbar"
-                    aria-valuenow="0"
+                    aria-valuenow="90"
                     aria-valuemin="0"
                     aria-valuemax="100"
+                    style={{ width: "95%" }}
                   >
-                    0%
+                    95%
                   </div>
                 </div>
-                <div className="progress mb-5">
+                <p className="fw-bold">Python</p>
+                <div className="progress mb-3">
                   <div
-                    className="progress-bar bg-secondary w-25"
+                    className="progress-bar bg-secondary"
                     role="progressbar"
-                    aria-valuenow="25"
+                    aria-valuenow="90"
                     aria-valuemin="0"
                     aria-valuemax="100"
+                    style={{ width: "90%" }}
                   >
-                    25%
+                    90%
                   </div>
                 </div>
-                <div className="progress mb-5">
+                <p className="fw-bold">JavaScript</p>
+                <div className="progress mb-3">
                   <div
-                    className="progress-bar bg-info text-dark w-50"
+                    className="progress-bar bg-info text-dark"
                     role="progressbar"
-                    aria-valuenow="50"
+                    aria-valuenow="88"
                     aria-valuemin="0"
                     aria-valuemax="100"
+                    style={{ width: "88%" }}
                   >
-                    50%
+                    88%
+                  </div>
+                </div>
+                <p className="fw-bold">HTML</p>
+                <div className="progress mb-3">
+                  <div
+                    className="progress-bar bg-warning text-dark"
+                    role="progressbar"
+                    aria-valuenow="92"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style={{ width: "92%" }}
+                  >
+                    92%
+                  </div>
+                </div>
+                <p className="fw-bold">CSS</p>
+                <div className="progress mb-3">
+                  <div
+                    className="progress-bar bg-danger text-dark"
+                    role="progressbar"
+                    aria-valuenow="94"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style={{ width: "94%" }}
+                  >
+                    94%
                   </div>
                 </div>
               </div>
@@ -426,13 +503,17 @@ const UXPortifolio = () => {
                 className="project p-2 border bg-primarys d-flex justify-content-center align-items-center rounded"
                 style={{ width: "33%" }}
               >
-                <img src={img2} alt="project1" style={{ width: "105%" }} />
+                <a href="https://wholelight.vercel.app">
+                  <img src={img2} alt="project1" style={{ width: "105%" }} />
+                </a>
               </div>
               <div
                 className="project p-2 border bg-primarys d-flex justify-content-center align-items-center rounded"
                 style={{ width: "33%" }}
               >
-                <img src={img4} alt="project1" style={{ width: "105%" }} />
+                <a href="https://printbaseweb.vercel.app">
+                  <img src={img4} alt="project1" style={{ width: "105%" }} />
+                </a>
               </div>
               <div
                 className="project p-2 border bg-primarys d-flex justify-content-center align-items-center rounded"
@@ -597,29 +678,49 @@ const UXPortifolio = () => {
           <div className="locations">
             <div className="row">
               <div className="col-md-6 mx-auto">
-                <form className="was-validated" action="#">
+                <form
+                  className="was-validated"
+                  // action="https://emailbackend.vercel.app/send-mail"
+                  method="POST"
+                  onSubmit={handleSubmit}
+                >
                   <input
                     className="form-control mt-3"
                     placeholder="Your name"
                     type="text"
+                    name="name"
                     required
+                    value={formData.name}
+                    onChange={handleChange}
                   />
                   <input
                     className="form-control my-4"
                     placeholder="example@gmail.com"
                     type="email"
+                    name="email"
                     required
+                    value={formData.email}
+                    onChange={handleChange}
                   />
                   <textarea
                     className="form-control"
                     id="validationServer01"
                     type="text"
+                    name="message"
                     placeholder="Message"
                     rows={6}
                     required
+                    value={formData.message}
+                    onChange={handleChange}
                   />
                   <div className="d-flex justify-content-end">
-                    <input className="btn btn-danger my-4 " type="submit" />
+                    <button
+                      className="btn btn-danger my-4 "
+                      type="submit"
+                      onClick={() => console.log("formData")}
+                    >
+                      Submit
+                    </button>
                   </div>
                 </form>
               </div>
@@ -657,7 +758,9 @@ const UXPortifolio = () => {
             <h6 className="fw-bold">Copyright &copy; All rights reserved </h6>
             <div className="icons">
               <i className="fa fa-linkedin me-4 text-white"></i>
-              <i className="fa fa-github me-4 text-white"></i>
+              <a href="https://github.com/dopswae98">
+                <i className="fa fa-github me-4 text-white"></i>
+              </a>
               <i className="fa fa-facebook text-white"></i>
             </div>
           </div>
