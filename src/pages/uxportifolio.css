@@ -4,6 +4,15 @@
     border-width: 30px !important;
 }
 
+.link-style{
+    text-decoration:none;
+    color: white;
+}
+.link-style:hover{
+    text-decoration:none;
+    color: black;
+}
+
 .envelop, .tabs p{
     cursor: pointer;
     font-weight: bold;

@@ -4,6 +4,7 @@ import img1 from "../images/carred1.png";
 import img2 from "../images/wholelightpagefront.png";
 import img3 from "../images/portifolio.png";
 import img4 from "../images/printbasehome.png";
+import code from "../images/code img.jpeg";
 import "./uxportifolio.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -138,7 +139,9 @@ const UXPortifolio = () => {
           zIndex: 1000,
         }}
       >
-        <i className="fa fa-envelope-o fs-4" aria-hidden="true"></i>
+        <a href="mailto:ephraimmatarutse@gmail.com">
+          <i className="fa fa-envelope-o fs-4" aria-hidden="true"></i>
+        </a>
       </div>
       <div
         className="position-absolute circle-2 user-img border border-secondary p-5 d-flex align-items-center justify-content-center"
@@ -192,8 +195,12 @@ const UXPortifolio = () => {
         <nav className="navbar navbar-expand-lg navbar-dark bg-transparent bg-body-tertiary sticky-top">
           <div className="container">
             <a className="navbar-brand fw-bold text-white" href="/#">
-              <i className="fa fa-linkedin" aria-hidden="true"></i>
-              <i className="fa fa-github-alt ms-3" aria-hidden="true"></i>
+              <a href="http://www.linkedin.com/in/ephraimmatarutse">
+                <i className="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="https://github.com/dopswae98">
+                <i className="fa fa-github-alt ms-3" aria-hidden="true"></i>
+              </a>
             </a>
 
             <div className="collapsed navbar-collapses" id="navbarScroll">
@@ -207,7 +214,12 @@ const UXPortifolio = () => {
                     aria-current="page"
                     href="/#"
                   >
-                    <i className="fa fa-envelope-o" aria-hidden="true"></i>
+                    <a
+                      href="mailto:ephraimmatarutse@gmail.com"
+                      className="text-color"
+                    >
+                      <i className="fa fa-envelope-o" aria-hidden="true"></i>
+                    </a>
                     <span className="ms-3">GET IN TOUCH</span>
                   </a>
                 </li>
@@ -242,22 +254,30 @@ const UXPortifolio = () => {
                 className="border border rounded-pill px-3"
                 style={{ zIndex: 1000 }}
               >
-                EXPERINCE
+                <a href="#experience" className="link-style">
+                  EXPERINCE
+                </a>
               </p>
               <p
                 className="mx-4 border bg-white text-dark fw-bold rounded-pill px-3"
                 style={{ zIndex: 1000 }}
               >
-                SKILLS
+                <a href="#skills" className="link-style text-dark">
+                  SKILLS
+                </a>
               </p>
               <p className="border rounded-pill px-3" style={{ zIndex: 1000 }}>
-                PRODUCTS
+                <a href="#projects" className="link-style">
+                  PROJECTS
+                </a>
               </p>
               <p
                 className="mx-4 border rounded-pill px-3"
                 style={{ zIndex: 1000 }}
               >
-                ABOUT
+                <a href="#about" className="link-style">
+                  ABOUT
+                </a>
               </p>
             </div>
           </div>
@@ -266,6 +286,7 @@ const UXPortifolio = () => {
       <section
         className="section experience mt-5 pt-2 "
         style={{ backgroundColor: "#1f1f1f" }}
+        id="experience"
       >
         <div className="container py-2 py-md-5 ">
           <h4 className="fw-bold text-white text-center">Work Experince</h4>
@@ -349,6 +370,7 @@ const UXPortifolio = () => {
 
       <section
         className="section skills py-5"
+        id="skills"
         style={{ backgroundColor: "#1f1f1f" }}
       >
         <div>
@@ -493,6 +515,7 @@ const UXPortifolio = () => {
       </section>
       <section
         className="section projects py-5"
+        id="projects"
         style={{ backgroundColor: "#1f1f1f" }}
       >
         <div className="container">
@@ -527,16 +550,28 @@ const UXPortifolio = () => {
       </section>
       <section
         className="about-sections text-white  py-5"
+        id="about"
         style={{ backgroundColor: "#1f1f1f" }}
       >
         <div className="container">
           <div className="row">
             <div className="col-md-4">
-              <div
+              {/* <div
                 className="p-2 border d-flex justify-content-center align-items-center rounded"
                 style={{ height: 200 }}
               >
-                <img src={img1} alt="project1" style={{ width: "30%" }} />
+                <img src={code} alt="project1" style={{ width: "30%" }} />
+              </div> */}
+              <div
+                className="border d-flex justify-content-center align-items-center rounded"
+                // style={{ height: 200 }}
+              >
+                <img
+                  src={code}
+                  alt="project1"
+                  className="img-fluid rounded"
+                  // style={{ width: "30%" }}
+                />
               </div>
             </div>
             <div className="col-md-8">
@@ -544,10 +579,11 @@ const UXPortifolio = () => {
               <div className="row">
                 <div className="col-md-8 ps-5">
                   <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Veniam similique voluptate tenetur, accusamus sapiente
-                    excepturi necessitatibus veritatis quis repellat libero
-                    nobis numquam cumque eum eveniet?
+                    I'm a Full Stack Engineer specializing in React, Node.js,
+                    Flask, Express.js, Django, and Python. With years of
+                    experience building scalable applications, I pride myself on
+                    writing clean, efficient code and working collaboratively
+                    with teams. Let's build something great together!
                   </p>
                 </div>
               </div>
@@ -555,7 +591,7 @@ const UXPortifolio = () => {
           </div>
         </div>
       </section>
-      <section
+      {/* <section
         className="preview px-4 py-5 px-md-0 text-dark"
         style={{ backgroundColor: "#1f1f1f" }}
       >
@@ -665,7 +701,7 @@ const UXPortifolio = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section
         className="contact text-white position-relative"
         style={{ backgroundColor: "#1f1f1f" }}
@@ -757,11 +793,15 @@ const UXPortifolio = () => {
           <div className="d-flex align-items-center justify-content-around py-3 flex-wrap">
             <h6 className="fw-bold">Copyright &copy; All rights reserved </h6>
             <div className="icons">
-              <i className="fa fa-linkedin me-4 text-white"></i>
+              <a href="http://www.linkedin.com/in/ephraimmatarutse">
+                <i className="fa fa-linkedin me-4 text-white"></i>
+              </a>
               <a href="https://github.com/dopswae98">
                 <i className="fa fa-github me-4 text-white"></i>
               </a>
-              <i className="fa fa-facebook text-white"></i>
+              <a href="https://www.facebook.com/ephraim.matarutse">
+                <i className="fa fa-facebook text-white"></i>
+              </a>
             </div>
           </div>
         </div>
