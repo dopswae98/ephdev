@@ -5,6 +5,9 @@ import img2 from "../images/wholelightpagefront.png";
 import img3 from "../images/portifolio.png";
 import img4 from "../images/printbasehome.png";
 import code from "../images/code img.jpeg";
+import cryptoo from "../images/cryptoO.png";
+import carrental from "../images/carrental.png";
+import jobite from "../images/jobit.png";
 import "./uxportifolio.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -521,28 +524,46 @@ const UXPortifolio = () => {
         <div className="container">
           <h5 className="fw-bold text-center text-white py-3">Projects</h5>
           <div className="card-holder">
-            <div className="d-flex justify-content-between">
+            <div className="d-flex justify-content-between flex-wrap">
               <div
-                className="project p-2 border bg-primarys d-flex justify-content-center align-items-center rounded"
-                style={{ width: "33%" }}
+                className="project border bg-primarys d-flex justify-content-center align-items-center rounded"
+                style={{ width: "33%", overflowX: "hidden" }}
               >
                 <a href="https://wholelight.vercel.app">
                   <img src={img2} alt="project1" style={{ width: "105%" }} />
                 </a>
               </div>
               <div
-                className="project p-2 border bg-primarys d-flex justify-content-center align-items-center rounded"
-                style={{ width: "33%" }}
+                className="project border bg-primarys d-flex justify-content-center align-items-center rounded"
+                style={{ width: "33%", overflowX: "hidden" }}
               >
                 <a href="https://printbaseweb.vercel.app">
                   <img src={img4} alt="project1" style={{ width: "105%" }} />
                 </a>
               </div>
               <div
-                className="project p-2 border bg-primarys d-flex justify-content-center align-items-center rounded"
-                style={{ width: "33%" }}
+                className="project border bg-primarys d-flex justify-content-center align-items-center rounded"
+                style={{ width: "33%", overflowX: "hidden" }}
               >
-                <img src={img3} alt="project1" style={{ width: "105%" }} />
+                <img src={cryptoo} alt="project1" style={{ width: "105%" }} />
+              </div>
+              <div
+                className="project border bg-primarys d-flex justify-content-center align-items-center rounded mt-4"
+                style={{ width: "33%", overflowX: "hidden" }}
+              >
+                <img src={carrental} alt="project1" style={{ width: "105%" }} />
+              </div>
+              <div
+                className="project border bg-primarys d-flex justify-content-center align-items-center rounded mt-4"
+                style={{ width: "33%", overflowX: "hidden" }}
+              >
+                <img src={jobite} alt="project1" style={{ width: "105%" }} />
+              </div>
+              <div
+                className="project border bg-primarys d-flex justify-content-center align-items-center rounded mt-4"
+                style={{ width: "33%", overflowX: "hidden" }}
+              >
+                <img src={carrental} alt="project1" style={{ width: "105%" }} />
               </div>
             </div>
           </div>
