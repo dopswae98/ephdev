@@ -524,44 +524,49 @@ const UXPortifolio = () => {
         <div className="container">
           <h5 className="fw-bold text-center text-white py-3">Projects</h5>
           <div className="card-holder">
-            <div className="d-flex justify-content-between flex-wrap">
+            <div className="row  px-md-0 mx-auto">
               <div
-                className="project border bg-primarys d-flex justify-content-center align-items-center rounded"
-                style={{ width: "33%", overflowX: "hidden" }}
+                className="project p-0 me-5 border bg-primarys col-md-3 rounded"
+                style={{ overflowX: "hidden", objectFit: "cover" }}
               >
                 <a href="https://wholelight.vercel.app">
-                  <img src={img2} alt="project1" style={{ width: "105%" }} />
+                  <img
+                    src={img2}
+                    alt="project1"
+                    className="w-100 p-0"
+                    style={{ objectFit: "cover", height: "100%" }}
+                  />
                 </a>
               </div>
               <div
-                className="project border bg-primarys d-flex justify-content-center align-items-center rounded"
-                style={{ width: "33%", overflowX: "hidden" }}
+                className="project ms-md-5 mt-3 mt-md-0 p-0 border bg-primarys col-md-3 me-5 rounded"
+                style={{ overflowX: "hidden" }}
               >
                 <a href="https://printbaseweb.vercel.app">
                   <img src={img4} alt="project1" style={{ width: "105%" }} />
                 </a>
               </div>
               <div
-                className="project border bg-primarys d-flex justify-content-center align-items-center rounded"
-                style={{ width: "33%", overflowX: "hidden" }}
+                className="project ms-md-5 mt-3 mt-md-0 p-0 border bg-primarys col-md-3 rounded"
+                style={{ overflowX: "hidden" }}
               >
                 <img src={cryptoo} alt="project1" style={{ width: "105%" }} />
               </div>
               <div
-                className="project border bg-primarys d-flex justify-content-center align-items-center rounded mt-4"
-                style={{ width: "33%", overflowX: "hidden" }}
+                className="project mt-3 mt-md-4 p-0 me-5 border bg-primarys col-md-3 rounded mt-4"
+                style={{ overflowX: "hidden" }}
               >
                 <img src={carrental} alt="project1" style={{ width: "105%" }} />
               </div>
               <div
-                className="project border bg-primarys d-flex justify-content-center align-items-center rounded mt-4"
-                style={{ width: "33%", overflowX: "hidden" }}
+                className="project ms-md-5 mt-3 mt-md-4 p-0 me-5 border bg-primarys col-md-3 rounded mt-4"
+                style={{ overflowX: "hidden" }}
               >
                 <img src={jobite} alt="project1" style={{ width: "105%" }} />
               </div>
               <div
-                className="project border bg-primarys d-flex justify-content-center align-items-center rounded mt-4"
-                style={{ width: "33%", overflowX: "hidden" }}
+                className="project ms-md-5 mt-3 mt-md-4 p-0 me-5 border bg-primarys col-md-3 align-items-center rounded mt-4"
+                style={{ overflowX: "hidden" }}
               >
                 <img src={carrental} alt="project1" style={{ width: "105%" }} />
               </div>
