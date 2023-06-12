@@ -237,7 +237,7 @@ const UXPortifolio = () => {
             style={{
               padding: 110,
               borderWidth: 40,
-              border: "15px solid grey",
+              border: "45px solid grey",
               opacity: 0.04,
             }}
           >
@@ -248,7 +248,7 @@ const UXPortifolio = () => {
                 height: 320,
                 borderRadius: 160,
                 zIndex: 1000,
-                border: "15px solid grey",
+                border: "35px solid grey",
                 padding: 10,
               }}
             >
