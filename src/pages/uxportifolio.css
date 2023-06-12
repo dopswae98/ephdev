@@ -4,6 +4,14 @@
     border-width: 30px !important;
 }
 
+
+.dots{
+    position: absolute;
+    right: 30px;
+     top: 50%; 
+     transform: rotate(90deg);
+}
+
 .link-style{
     text-decoration:none;
     color: white;
@@ -49,8 +57,14 @@
     .envelop{
         right: 40px !important;
     }
+    .ux{
+        position: relative !important;
+    }
     .dots{
-        right: -25px !important;
+        position: absolute !important;
+        right: -28px;
+        top: 50% !important; 
+        transform: rotate(90deg);
     }
     .circle-2{
         width: 200px !important;
@@ -81,5 +95,8 @@
     }
     .ux{
         overflow-x: hidden;
+    }
+    .hero-text{
+        margin: top 200px !important;
     }
 }

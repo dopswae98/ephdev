@@ -126,7 +126,6 @@ const UXPortifolio = () => {
       <div
         className="dots position-fixed "
         // ref={tabRef}
-        style={{ right: 10, top: "50%", transform: "rotate(90deg)" }}
       >
         <i className="fa fa-circle text-white" aria-hidden="true"></i>
         <i className="fa fa-circle-o text-white mx-3" aria-hidden="true"></i>
@@ -146,7 +145,7 @@ const UXPortifolio = () => {
           <i className="fa fa-envelope-o fs-4" aria-hidden="true"></i>
         </a>
       </div>
-      <div
+      {/* <div
         className="position-absolute circle-2 user-img border border-secondary p-5 d-flex align-items-center justify-content-center"
         style={{
           top: "20.8%",
@@ -193,7 +192,7 @@ const UXPortifolio = () => {
           zIndex: 1,
           color: "#4d4d4d",
         }}
-      ></div>
+      ></div> */}
       <section className="section nav-section pt-2">
         <nav className="navbar navbar-expand-lg navbar-dark bg-transparent bg-body-tertiary sticky-top">
           <div className="container">
@@ -232,66 +231,98 @@ const UXPortifolio = () => {
         </nav>
       </section>
       <section className="hero-section pt-5">
-        <div className="d-flex flex-column mt-5 align-items-center justify-content-center">
+        <div className="d-flex flex-column mt-5 align-items-center justify-content-center position-relative ">
           <div
-            className="user-img border border-3 border-secondary p-5 d-flex align-items-center justify-content-center"
-            style={{ width: 120, height: 120, borderRadius: 60, zIndex: 1000 }}
+            className="user-img borders position-absolute opacity-25b rounded-circle border-5"
+            style={{
+              padding: 110,
+              borderWidth: 40,
+              border: "15px solid grey",
+              opacity: 0.04,
+            }}
           >
-            {/* <img className="" src={img1} alt="img1" style={{ width: 100 }} /> */}
-            <span className="fs-1">
-              <i
-                className="fa fa-file-code-o text-secondary"
-                aria-hidden="true"
-              ></i>
-            </span>
+            <div
+              className="user-img borderv border-3x  border-secondary d-flex align-items-center justify-content-center"
+              style={{
+                width: 320,
+                height: 320,
+                borderRadius: 160,
+                zIndex: 1000,
+                border: "15px solid grey",
+                padding: 10,
+              }}
+            >
+              <div
+                className="user-img border border-3 border-secondary p-5 d-flex align-items-center justify-content-center"
+                style={{
+                  width: 120,
+                  height: 120,
+                  borderRadius: 60,
+                  zIndex: 1000,
+                }}
+              >
+                {/* <img className="" src={img1} alt="img1" style={{ width: 100 }} /> */}
+                <span className="fs-1">
+                  <i
+                    className="fa fa-file-code-o text-secondary"
+                    aria-hidden="true"
+                  ></i>
+                </span>
+              </div>
+            </div>
           </div>
-          <p className="text-muted mt-3" style={{ zIndex: 1000 }}>
-            SOFTWARE ENGINEER
-          </p>
-          <h3 className="fw-bold text-white" style={{ zIndex: 1000 }}>
-            EPHRAIM MATARUTSE
-          </h3>
-          <div className="nav-tab-section mt-2">
-            <div className="tabs d-flex justify-content-betweens text-white">
-              <p
-                className="border border rounded-pill px-3"
-                style={{ zIndex: 1000 }}
-              >
-                <a href="#experience" className="link-style">
-                  EXPERINCE
-                </a>
-              </p>
-              <p
-                className="mx-4 border bg-white text-dark fw-bold rounded-pill px-3"
-                style={{ zIndex: 1000 }}
-              >
-                <a href="#skills" className="link-style text-dark">
-                  SKILLS
-                </a>
-              </p>
-              <p className="border rounded-pill px-3" style={{ zIndex: 1000 }}>
-                <a href="#projects" className="link-style">
-                  PROJECTS
-                </a>
-              </p>
-              <p
-                className="mx-4 border rounded-pill px-3"
-                style={{ zIndex: 1000 }}
-              >
-                <a href="#about" className="link-style">
-                  ABOUT
-                </a>
-              </p>
+          <div className="hero-text text-center mt-5">
+            <p className="text-muted mt-3" style={{ zIndex: 1000 }}>
+              SOFTWARE ENGINEER
+            </p>
+            <h3 className="fw-bold text-white" style={{ zIndex: 2000 }}>
+              EPHRAIM MATARUTSE
+            </h3>
+            <div className="nav-tab-section mt-5 mb-5">
+              <div className="tabs d-flex justify-content-center align-items-center text-white">
+                <p
+                  className="border border rounded-pill px-3 "
+                  style={{ zIndex: 1000 }}
+                >
+                  <a href="#experience" className="link-style">
+                    EXPERINCE
+                  </a>
+                </p>
+                <p
+                  className="mx-4 border bg-white text-dark fw-bold rounded-pill px-3"
+                  style={{ zIndex: 1000 }}
+                >
+                  <a href="#skills" className="link-style text-dark">
+                    SKILLS
+                  </a>
+                </p>
+                <p
+                  className="border rounded-pill px-3"
+                  style={{ zIndex: 1000 }}
+                >
+                  <a href="#projects" className="link-style">
+                    PROJECTS
+                  </a>
+                </p>
+                <p
+                  className="mx-4 border rounded-pill px-3"
+                  style={{ zIndex: 1000 }}
+                >
+                  <a href="#about" className="link-style">
+                    ABOUT
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section
-        className="section experience mt-5 pt-2 "
+        className="section experience mt-5 pt-5 "
         style={{ backgroundColor: "#1f1f1f" }}
         id="experience"
       >
-        <div className="container py-2 py-md-5 ">
+        <div className="container py-2 py-md-5 pt-2 ">
           <h4 className="fw-bold text-white text-center">Work Experince</h4>
           <div className="row mt-md-5 mt-3">
             <div className="col-md-10 mx-auto">
